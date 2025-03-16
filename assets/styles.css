@@ -1,0 +1,244 @@
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3f8fc;
+    color: #2e3a47;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #f1f2f3; /* Navy Blue */
+    color: #040026;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    border-style: none none dashed none;
+    
+}
+
+header h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+}
+
+.btn-download {
+    padding: 10px 20px;
+    background-color: #003b5c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.btn-download:hover {
+    background-color: #022f45;
+}
+
+.profile {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: scale-down;
+}
+
+.profile h2 {
+    font-size: 1.8rem;
+    margin-top: 10px;
+}
+
+.profile p {
+    font-size: 1rem;
+    color: #040026;
+}
+
+
+
+.section {
+    padding: 40px 0;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    color: #003b5c;
+    margin-bottom: 20px;
+}
+
+/* 
+.projects .project {
+    display: inline;
+    width: 48%;
+    margin: 10px 1%;
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+} */
+
+.projects img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Socmed */
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+    margin-top: 50px;
+}
+
+
+.social-icon {
+    width:55px;  
+    height: 40px; 
+    transition: transform 0.3s; 
+}
+
+.social-icon:hover {
+    transform: scale(1.2); 
+}
+
+/* Form Contact*/
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-size: 1rem;
+    color: #003b5c;
+}
+
+form input, form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+form button {
+    padding: 10px;
+    font-size: 1.1rem;
+    color: white;
+    background-color: #003b5c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #022f45;
+}
+
+.map-container {
+    margin-top: 20px;
+}
+
+/* Video */
+.video-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.video-container iframe {
+    max-width: 100%;
+    border: none;
+}
+
+/* Scroll */
+.btn-up {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #003b5c;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 2rem;
+    cursor: pointer;
+    display: block;
+}
+
+.btn-up:hover {
+    background-color: #022f45;
+}
+
+/* Footer */
+footer {
+    background-color: #1897e0;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer p {
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Navbar Responsive */
+body {margin: 0;
+    background-color: #ddd;}
+
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #167b3f;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.361);
+  position:fixed;
+  width: 100%;
+  z-index: 1;
+
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    font-style: bold;
+    font-size: small;
+    color: white;
+    padding:  5px 10px 5px 10px;
+    text-decoration: none;
+    /* display: block; */
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #000800;}
+
+ul.topnav li a.active {background-color: #000800;}
+
+/* ul.topnav li.right {float: right;} */
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
+.coba{
+    display: inline; /* the default for span */
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid blue;  
+    background-color: yellow; 
+}
