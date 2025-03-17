@@ -1,47 +1,128 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
 body {
-    margin: 0;
-    background-color: #ddd;
-    font-family: 'Poppins', sans-serif;
-    background-color: #f3f8fc;
-    color: #2e3a47;
-    /* line-height: 1.6; */
+	line-height: 1;
 }
-.skills{
-    display: inline;
-
-
+ol, ul {
+	list-style: none;
 }
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Style */
+
+body{
+    background-color: rgb(197, 197, 197);
+}
+
+.container {
+    width: 800px;
+    margin: auto;
+}
+
+/* Navbar Responsive */
+ul.topnav {
+    width: 800px
+    list-style-type: none;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    background-color: #167b3f;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.361);
+    position:fixed;
+    z-index: 1;
+  
+  }
+  
+  ul.topnav li {float: left;}
+  
+  ul.topnav li a {
+      font-style: bold;
+      font-size: small;
+      color: white;
+      padding:  5px 10px 5px 10px;
+      text-decoration: none;
+      /* display: block; */
+  }
+  
+  ul.topnav li a:hover:not(.active) {background-color: #000800;}
+  
+  ul.topnav li a.active {background-color: #000800;}
+  
+  /* ul.topnav li.right {float: right;} */
+  
+  @media screen and (max-width: 600px) {
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
+  }
 
 header {
-    background-color: #f1f2f3; /* Navy Blue */
-    color: #040026;
-    padding: 20px 0;
+    background-color: #041a31; /* Navy Blue */
+    padding: 10px 0;
     text-align: center;
-    position: relative;
     border-style: none none dashed none;
     
+}
+header h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    margin: 30px;
+    color: #ffffff;
 }
 
 h3 {
     font-family: 'Roboto';
-    font-size: 1.5rem;
-    margin-top: 10px;
-    padding-bottom: 0px;
+    font-size: 25px;
+    margin: 20px 0 5px 0;
 }
 
-header h1 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 2.5rem;
-}
+
 
 .btn-download {
     padding: 10px 20px;
     background-color: #003b5c;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius:12px;
     font-size: 1rem;
-    margin-top: 10px;
     font-style: italic;
 }
 
@@ -50,8 +131,10 @@ header h1 {
 }
 
 .profile {
-    margin-top: 20px;
+    margin-top: 30px;
     text-align: center;
+    box-shadow: #ffffff;
+    z-index: 1;
 }
 
 .profile-img {
@@ -63,25 +146,38 @@ header h1 {
 
 .profile h2 {
     font-size: 1.8rem;
-    margin-top: 10px;
+    margin-top: 30px;
+    color: #ffffff;
 }
 
 .profile p {
-    font-size: 1rem;
-    color: #040026;
+    font: 16px/25px 'Roboto', sans-serif;
+    color: #dadade;
+    padding: 15px;
+    text-align: center;
 }
 
-
-
 .section {
-    padding: 40px 0;
+    margin-top: 10px;
+    padding: 20px;
     background-color: #ffffff;
     margin-bottom: 20px;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
+.jobDesk {
+    margin-bottom: 10px;
+}
+section p{
+    margin-bottom: 10px;
+    font: 16px/10px 'Roboto', sans-serif;
+    color: #003b5c;
+    padding-left: 2px;
+}
+
+li {
+    font: 15px/20px 'Roboto', sans-serif;
+    color: #003b5c;
+    padding-left: 2px;
 }
 
 h2 {
@@ -91,21 +187,8 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* 
-.projects .project {
-    display: inline;
-    width: 48%;
-    margin: 10px 1%;
-    background-color: white;
-    padding: 15px;
-    box-shadow: 0 0 10px     rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-} */
 
-.projects img {
-    width: 100%;
-    border-radius: 10px;
-}
+
 
 /* Socmed */
 .social-media {
@@ -205,48 +288,4 @@ footer {
 footer p {
     font-size: 1rem;
     font-family: 'Roboto', sans-serif;
-}
-
-/* Navbar Responsive */
-ul.topnav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #167b3f;
-  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.361);
-  position:fixed;
-  width: 100%;
-  z-index: 1;
-
-}
-
-ul.topnav li {float: left;}
-
-ul.topnav li a {
-    font-style: bold;
-    font-size: small;
-    color: white;
-    padding:  5px 10px 5px 10px;
-    text-decoration: none;
-    /* display: block; */
-}
-
-ul.topnav li a:hover:not(.active) {background-color: #000800;}
-
-ul.topnav li a.active {background-color: #000800;}
-
-/* ul.topnav li.right {float: right;} */
-
-@media screen and (max-width: 600px) {
-  ul.topnav li.right, 
-  ul.topnav li {float: none;}
-}
-.coba{
-    display: inline; /* the default for span */
-    width: 100px;
-    height: 100px;
-    padding: 5px;
-    border: 1px solid blue;  
-    background-color: yellow; 
 }
