@@ -6,8 +6,9 @@ body {
     color: #2e3a47;
     /* line-height: 1.6; */
 }
-.exp{
-    margin: 0px 0px 2px 0px;
+.skills{
+    display: inline;
+
 
 }
 
@@ -195,10 +196,10 @@ form button:hover {
 
 /* Footer */
 footer {
-    background-color: #1897e0;
+    background-color: #c9c9c9;
     color: #ffffff;
     text-align: center;
-    padding: 10px 0;
+
 }
 
 footer p {
