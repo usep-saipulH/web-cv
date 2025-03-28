@@ -61,9 +61,10 @@ html, body {
     margin: 0 auto;
     width: 80%;
     border: 2px solid black;
-    background-color: rgb(212, 230, 210);
+    background-color: rgb(241, 243, 241);
     display: grid;
     grid-template-columns: 1fr 4fr;
+    grid-template-rows: min-content 1fr min-content;
     grid-template-areas: 
     'header header'
     'aside main'
@@ -72,15 +73,17 @@ html, body {
 }
 
 header {
-    display: inline-table;
+    display: flex;
     margin: 0px;
     grid-area: header;
+    justify-content: right;
+    align-items: center;
     background-color: rgb(54, 139, 58);
     padding: 0px 10px;
     box-sizing: border-box;
-    height: 10px;
-    text-align: right;
-    
+    height: 20px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    z-index: 12;
 }
 
 header ul li {
@@ -93,13 +96,14 @@ header ul li {
 
 aside {
     grid-area: aside;
-    background-color: brown;
+    background-color: rgb(220, 196, 243);
     box-sizing: border-box;
 }
 
 .profile {
     height: 100px;
     width: 100px;
+    margin: 20px auto;
     background-color: aliceblue;
     border-radius: 50px;
 }
@@ -122,10 +126,18 @@ main {
     
 }
 
+p{
+    background-color: rgba(255, 222, 173, 0);
+}
 
+.info {
+    padding: 4px;
+    text-align: left;
+}
 footer {
+    color: rgb(106, 107, 105);
     grid-area: footer;
-    background-color: black;
-    font-size: 12px;
+    background-color: none;
     text-align: center;
+    padding: 10px;
 }
