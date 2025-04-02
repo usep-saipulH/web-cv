@@ -5,6 +5,270 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>wp-cv-usep</title>
     <link rel="stylesheet" href="/style.css">
+        /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.5;
+}
+/* ol, ul {
+	list-style: none;
+} */
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+
+}
+
+
+.container {
+    color: aliceblue;
+    font-size: 12px;
+    font-family: verdana;
+    width: 100%;
+    margin-top: 30px;
+    /* border: 2px solid black; */
+    background-color: rgb(241, 243, 241);
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: min-content 1fr min-content;
+    grid-template-areas: 
+    /* 'header header' */
+    'aside main'
+    'footer footer'
+    ;
+}
+
+
+
+header {
+    color: aliceblue;
+    font-size: 12px;
+    font-family: verdana;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    margin: -30px auto;
+    /* grid-area: header; */
+    justify-content: right;
+    align-items: center;
+    background-color: rgb(54, 139, 58);
+    padding: 0px 0px;
+    box-sizing: border-box;
+    height: 30px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+    z-index: 12;
+}
+
+header ul li a{
+    padding: 0px 15px;
+}
+
+.tombol{
+	display: none;
+	color: white;
+	font-size: 14pt;			
+}
+ 
+.tombol:hover{
+	cursor: pointer;
+}
+
+header ul li {
+    display: inline;
+    padding: 0px 5px;
+    overflow: hidden;
+}
+
+header ul li a {
+    text-decoration-line: none;
+    color: aliceblue;
+}
+
+header a:hover {
+    background-color: rgb(91, 151, 86);
+    padding: 10px;
+}
+
+aside {
+    grid-area: aside;
+    /* border: 2px solid rgb(188, 238, 197); */
+    /* background-color: rgb(196, 243, 208); */
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin : 5px 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile {
+    height: 100px;
+    width: 100px;
+    margin: 20px auto;
+    background-color: rgb(243, 62, 7);
+    border-radius: 50px;
+}
+
+aside p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px auto;
+    line-height: 1.3;
+}
+
+main {
+    grid-area: main;
+    /* background-color: blue; */
+    box-sizing: border-box;
+}
+/* Pengalaman Kerja */
+.experience ul li{
+    /* border: 2px solid rgb(188, 238, 197); */
+    /* background-color: rgb(44, 117, 117); */
+    color:rgb(88, 67, 194);
+    line-height: 1.3;
+    /* display: inline-block; */
+}
+
+.mardesk {
+    margin: 20px;
+}
+
+h2{
+    padding: 8px;
+    color:rgb(88, 67, 194);
+    font-size: 18px;
+    border-bottom: 2px solid rgb(88, 67, 194);
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+h4{
+    color:rgb(88, 67, 194);
+    font-size: 15px;
+}
+
+p{
+    color: rgb(88, 67, 194);
+    line-height: 1.3;
+}
+
+.desk{
+    margin: 3px;
+    padding: 5px;
+}
+
+.info {
+    padding: 8px;
+    text-align: -moz-center;
+    color: rgb(88, 67, 194);
+    line-height: 1.3;
+}
+.info p {
+    font-size: 14px;
+}
+
+footer {
+    color: rgb(106, 107, 105);
+    grid-area: footer;
+    background-color: none;
+    text-align: center;
+    padding: 10px;
+}
+
+img {
+    width: 15px;
+    height: 15px;
+    margin-right: 3px;
+}
+
+.icon.contact a{
+    text-decoration: none;
+    margin-left: 5px;
+    padding-left: 6px;
+}
+
+.icon.contact{
+    margin: 10px;
+}
+
+.skill .skl {
+    color: rgb(88, 67, 194);
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: 1fr min-content; */
+    grid-template-areas: 
+    'coding tools'
+}
+
+.skill .mardesk .skl ul {
+    margin-left: 15px;
+}
+
+.mardesk a {
+    text-decoration: none;
+    color: rgb(88, 67, 194);
+}
+
+
+/* Res */
+@media screen and (max-width: 700px) {
+    header {
+        height: auto;
+        justify-content: center;
+        position: relative;
+        margin-top: 0px;
+    }
+    header ul li a {
+        display: block;
+        text-align: center;
+        float: none;
+        
+    }
+}
+    </style>
 </head>
 <header>
     <ul>
@@ -219,7 +483,6 @@
             </div>
         </main>
         <footer>&copy; copyright usep saipul helmi 2025</footer>
-    </div>   
-    
+    </div>
 </body>
 </html>

@@ -1,0 +1,403 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.5;
+}
+/* ol, ul {
+	list-style: none;
+} */
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+
+}
+
+
+.container {
+    color: aliceblue;
+    font-size: 12px;
+    font-family: verdana;
+    width: 100%;
+    margin-top: 30px;
+    background-color: rgb(241, 243, 241);
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: min-content 1fr min-content;
+    grid-template-areas: 
+    'aside main'
+    'footer footer'
+    ;
+}
+
+
+
+header {
+    color: aliceblue;
+    font-size: 12px;
+    font-family: verdana;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    margin: -30px auto;
+    justify-content: right;
+    align-items: center;
+    background-color: rgb(28, 68, 30);
+    padding: 0px 0px;
+    box-sizing: border-box;
+    height: 30px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+    z-index: 12;
+}
+
+header ul li a{
+    padding: 0px 15px;
+}
+
+.tombol{
+	display: none;
+	color: white;
+	font-size: 14pt;			
+}
+ 
+.tombol:hover{
+	cursor: pointer;
+}
+
+header ul li {
+    display: inline;
+    padding: 0px 5px;
+    overflow: hidden;
+}
+
+header ul li a {
+    text-decoration-line: none;
+    color: aliceblue;
+}
+
+header a:hover {
+    background-color: rgb(91, 151, 86);
+    padding: 10px;
+}
+
+aside {
+    grid-area: aside;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin : 5px 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile {
+    height: 100px;
+    width: 100px;
+    margin: 20px auto;
+    background-color: rgb(54, 139, 58) ;
+    border-radius: 50px;
+}
+
+aside p, button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px auto;
+    line-height: 1.3;
+    
+}
+
+button a {
+    text-decoration: none;
+}
+
+.profil {
+    /* border: 2px solid rgb(15, 209, 118); */
+    border-radius: 5px;
+    padding: 30px auto;
+    
+}
+
+.info {
+    padding: 8px;
+    text-align: -moz-center;
+    color: rgb(238, 238, 238);
+    line-height: 1.5;
+    background-color: rgb(54, 139, 58) ;
+    border-radius: 7px;
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.info p {
+    font-size: 14px;
+    color: aliceblue;
+}
+
+
+
+/* Pengalaman Kerja */
+.experience ul li{
+    color:rgb(54, 139, 58) ;
+    line-height: 1.3;
+}
+
+.exp {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.exp1, .exp2, .exp3, .exp4{
+    text-align: center;
+    border-radius: 15px;
+    border: 2px solid rgb(54, 139, 58);
+    margin: 5px;
+    padding: 0px 0px;
+    box-shadow: 1px 2px 1px 2px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.exp .exp1 ul li,
+.exp2 ul li,
+.exp3 ul li, 
+.exp4 ul li {
+    text-align: left;
+}
+
+.exp .mardesk {
+    margin-left: 30px;
+    padding-bottom: 20px;
+}
+/* Akhir Pengalaman Kerja */
+
+/* margin List */
+.mardesk {
+    margin-left: 10px;
+}
+
+/* Pendidikan */
+
+.edu{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.edu1, .edu2 {
+    text-align: center;
+    margin: 10px;
+    border: 2px solid rgb(54, 139, 58);
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.edu2 {
+    order: 1;
+}
+
+.edu1 {
+    order: 2;
+}
+
+/* Cerificate */
+.certif {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+}
+
+.cert1, .cert2, .cert {
+    border: 2px solid rgb(54, 139, 58);
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+h2{
+    padding: 8px;
+    color:rgb(54, 139, 58) ;
+    font-size: 18px;
+    border-bottom: 2px dashed rgb(54, 139, 58) ;
+    text-align: center;
+}
+
+h4{
+    color:rgb(236, 235, 241);
+    font-size: 15px;
+    background-color: rgb(54, 139, 58);
+    padding: 5px 0px;
+    width: 100%;
+    
+}
+
+p{
+    color: rgb(18, 56, 20) ;
+    line-height: 1.3;
+}
+
+.desk{
+    margin: 3px;
+    padding: 5px;
+}
+
+footer {
+    color: rgb(106, 107, 105);
+    grid-area: footer;
+    background-color: none;
+    text-align: center;
+    padding: 10px;
+}
+
+img {
+    width: 15px;
+    height: 15px;
+    margin-right: 3px;
+}
+
+.icon.contact a{
+    text-decoration: none;
+    margin-left: 5px;
+    padding-left: 6px;
+}
+
+.icon{
+    margin: 10px;
+}
+
+.skl  {
+    color: rgb(54, 139, 58) ;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.coding, .tools{
+    margin: 10px;
+    border: 2px solid rgb(54, 139, 58);
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+.skill .mardesk .skl ul {
+    margin-left: 15px;
+}
+
+.mardesk .skl h4 {
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: rgb(54, 139, 58) ;
+    color: aliceblue;
+}
+
+.mardesk a {
+    text-decoration: none;
+    color: rgb(88, 67, 194);
+}
+
+
+/* Portofolio dan Contact */
+.portco{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 2px dashed rgb(54, 139, 58);
+}
+
+.portofolio, .contact {
+    margin: 10px;
+    border: 2px solid rgb(54, 139, 58);
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+.portco h2{
+    color: aliceblue;
+    background-color: rgb(54, 139, 58);
+    border: none;
+}
+
+.portofolio ul {
+    margin-top: 15px;
+    line-height: 22px;
+}
+
+
+
+/* Resposnive */
+@media screen and (max-width: 700px) {
+    header {
+        justify-content: center;
+        position: relative;
+        margin-top: 0px;
+    }
+    header ul li a {
+        padding: 0px 3px;
+        
+    }
+}
+
+@media screen and (max-width: 530px) {
+
+    .container {
+        display: block;
+        padding-top: 20px;
+    }
+
+    .exp, .edu,
+    .portco, .certif, .skl {
+        display: block;
+    }
+
+    header {
+        height: auto;
+    }
+
+    header ul li a {
+        display: block;
+        text-align: center;
+        line-height: 10px;
+        float: none;
+        
+    }
+}
