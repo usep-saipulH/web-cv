@@ -58,40 +58,70 @@ html, body {
     color: aliceblue;
     font-size: 12px;
     font-family: verdana;
-    margin: 0 auto;
-    width: 80%;
+    width: 100%;
+    margin-top: 30px;
     /* border: 2px solid black; */
     background-color: rgb(241, 243, 241);
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: min-content 1fr min-content;
     grid-template-areas: 
-    'header header'
+    /* 'header header' */
     'aside main'
     'footer footer'
     ;
 }
 
+
+
 header {
+    color: aliceblue;
+    font-size: 12px;
+    font-family: verdana;
     display: flex;
-    margin: 0px;
-    grid-area: header;
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    margin: -30px auto;
+    /* grid-area: header; */
     justify-content: right;
     align-items: center;
     background-color: rgb(54, 139, 58);
-    padding: 0px 10px;
+    padding: 0px 0px;
     box-sizing: border-box;
-    height: 20px;
+    height: 30px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
     z-index: 12;
 }
 
+header ul li a{
+    padding: 0px 15px;
+}
+
+.tombol{
+	display: none;
+	color: white;
+	font-size: 14pt;			
+}
+ 
+.tombol:hover{
+	cursor: pointer;
+}
+
 header ul li {
-    margin: 0px 0px;
-    padding: 0px 0px;
-    text-decoration: none;
     display: inline;
     padding: 0px 5px;
+    overflow: hidden;
+}
+
+header ul li a {
+    text-decoration-line: none;
+    color: aliceblue;
+}
+
+header a:hover {
+    background-color: rgb(91, 151, 86);
+    padding: 10px;
 }
 
 aside {
@@ -181,4 +211,53 @@ footer {
     padding: 10px;
 }
 
+img {
+    width: 15px;
+    height: 15px;
+    margin-right: 3px;
+}
 
+.icon.contact a{
+    text-decoration: none;
+    margin-left: 5px;
+    padding-left: 6px;
+}
+
+.icon.contact{
+    margin: 10px;
+}
+
+.skill .skl {
+    color: rgb(88, 67, 194);
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: 1fr min-content; */
+    grid-template-areas: 
+    'coding tools'
+}
+
+.skill .mardesk .skl ul {
+    margin-left: 15px;
+}
+
+.mardesk a {
+    text-decoration: none;
+    color: rgb(88, 67, 194);
+}
+
+
+/* Res */
+@media screen and (max-width: 700px) {
+    header {
+        height: auto;
+        justify-content: center;
+        position: relative;
+        margin-top: 0px;
+    }
+    header ul li a {
+        display: block;
+        text-align: center;
+        float: none;
+        
+    }
+}
